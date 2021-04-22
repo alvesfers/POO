@@ -1,12 +1,32 @@
 <?php
 
 require('/classes/Usuario.class.php');
+require('/classes/Fabricante.class.php');
+require('/classes/Estoque.class.php');
+require('/classes/Movimentacao.class.php');
+
 
 class Main {
     public function __construct(){
 
         $objUsuario = new Usuario;
+        var_dump( $objUsuario::getAvailableDrivers());
+
+        $objFabricante = new Fabricante;
+        $objEstoque = new Estoque;
+        $objMovimentação = new Movimentacao;
         
+
+        switch($_SERVER['argv'][1]) {
+            case 'gravaUsuario':
+                //$objUsuario->setDados();
+                //$objUsuario->gravaDados();
+                break;
+            
+            default:
+            echo "Não existe a funcionalidade {$_SERVER['agrv'][1]}\n}";
+        }
+    
     }
     public function __destruct()
     {

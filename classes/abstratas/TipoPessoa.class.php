@@ -1,13 +1,12 @@
 <?php
-require_once 'DataBase.php';
+require(__DIR__.'../interfaces/fabricante.interface.php');
+require(__DIR__.'/abstratas/TipoPessoa.class.php');
 
-abstract class TipoPessoa extends DataBase{
-    protected $id;
-    protected $nome;
+Class Fabricante extends TipoPessoa implements iFabricante {
+    public function setDados (array $dados):bool{
 
-    public function __construct(){
-        parent:: __construct()
+    }
+    public function getDados (int $id_fabricante):array{
         
     }
-    
 }

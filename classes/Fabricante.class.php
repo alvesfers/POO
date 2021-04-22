@@ -10,4 +10,3 @@ Class Fabricante extends TipoPessoa implements iFabricante {
         
     }
 }
-}
